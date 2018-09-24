@@ -12,17 +12,9 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-if a >= h and b <= w :
-    print('Yes')
-elif b <= h and a <= w:
-    print('Yes')
-elif b <= h and c <= w:
-    print('Yes')
-elif c <= h and b <= w:
-    print('Yes')
-elif a <= h and c <= w:
-    print('Yes')
-elif c <= h and a <= w:
+if (a <= h and b <= w) or (b <= h and a <= w) or (b <= h and c <= w) or \
+(c <= h and b <= w) or (a <= h and c <= w) or (c <= h and a <= w) :
     print('Yes')
 else:
     print('No')  
+
