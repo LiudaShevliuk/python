@@ -1,16 +1,21 @@
+
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-string = input('Enter your string: ')
+def ui_input() -> str:
+    """This function takes the string"""
+    return input('Enter your string: ')
 
-def remove_symbols(string):
+def remove_symbols(string: str) -> str:
+    """This function removes all symbols except brackets from string"""
     brackets = ['(', ')', '[', ']', '{', '}', '<', '>']
     for _ in string:
         if _ not in brackets:
             string = string.replace(_, '')
     return string
 
-def remove_brackets_pairs(string):
+def remove_brackets_pairs(string: str) -> bool:
+    """This function removes brackets pairs"""
     brackets_pairs = ['()','{}','[]','<>']
     while len(string) > 0:
         start_len = len(string)
@@ -23,16 +28,4 @@ def remove_brackets_pairs(string):
             break
     return False
 
-brackers_str = remove_symbols(string)
-
-if len(string) % 2 == 0:
-    print(remove_brackets_pairs(brackers_str))
-else:
-    print('False')
-
-
-
-
-
-
-
+print(remove_brackets_pairs(remove_symbols(ui_input())))
