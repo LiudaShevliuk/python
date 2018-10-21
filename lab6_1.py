@@ -4,10 +4,9 @@
 import math
 
 def ui_input() -> list:
-    """This function takes three sides of trisngle"""
+    """This function takes three sides of triangle"""
     print('Enter three sides of triangle: ')
-    sides = [int(input()), int(input()), int(input())]
-    return sides
+    return [int(input()), int(input()), int(input())]
 
 def triangle_square(sides: list) -> float:
     """This function calculates square of the triange"""
@@ -17,7 +16,7 @@ def triangle_square(sides: list) -> float:
     return square
 
 def ui_output(square: float) -> None:
-    """This function print  the square of triangle"""
+    """This function prints the square of triangle"""
     print('Square: {:1.3f}'.format(square))
     
 ui_output(triangle_square(ui_input()))
