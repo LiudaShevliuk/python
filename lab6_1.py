@@ -19,8 +19,5 @@ def triangle_square(sides: list) -> float:
 def ui_output(square: float) -> None:
     """This function print  the square of triangle"""
     print('Square: {:1.3f}'.format(square))
-
-sides = ui_input()
-square = triangle_square(sides)
-ui_output(square)
-
+    
+ui_output(triangle_square(ui_input()))
