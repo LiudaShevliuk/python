@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-input_string = input('Enter your string: ')
-offset = int(input('Enter the offset: '))
+def offset_of_str(string: str, offset: int) -> str:
+    """This function does the offset of string""" 
+    res_string = string[offset:] + string[:offset]
+    return res_string
 
-if offset > len(input_string)/2:
-    print('Enter another offset!')
-    exit()
+def ui_output(res: str) -> None:
+    """This function print an offset string"""
+    print(res)
 
-res_string = input_string[offset:] + input_string[:offset]
-
-print(res_string)
-
+ui_output(offset_of_str(input('Enter your string: '),\
+          int(input('Enter the offset: '))))
