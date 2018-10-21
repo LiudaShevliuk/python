@@ -18,7 +18,7 @@ def is_palindrome(string: str) -> bool:
     return res_string == res_string[::-1]
 
 def ui_output(is_pal: bool) -> None:
-    """This function prints the result of cheking"""
+    """This function prints the result of checking"""
     print(is_pal)
 
 ui_output(is_palindrome(ui_input()))
