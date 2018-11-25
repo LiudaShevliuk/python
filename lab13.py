@@ -69,7 +69,7 @@ def employees_creating() -> list:
              Entrepreneur(name, random.randint(100, 500)),
              Freelancer(name, random.randint(10, 50), random.randint(500, 5000))
              ]))
-    return sorted(employees, key=lambda x: x.calc_salary(), reverse=True)
+    return sorted(employees, key = lambda x: x.calc_salary(), reverse = True)
 
 def ui_output(employees: list) -> None:
     for employee in employees:
