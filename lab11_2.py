@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-def random(seed = 654321):
+def own_random(seed = 654321):
     while True:
         x = str(seed)
         if len(x) != 6:
@@ -13,6 +13,6 @@ def random(seed = 654321):
         seed = res[3:9]
         yield int(seed)
 
-func = random()
+func = own_random()
 for _ in range(10):
     print(func.__next__())
